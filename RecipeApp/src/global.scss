@@ -1,0 +1,95 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+/* src/global.scss */
+
+/* Styles globaux pour l'application */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+/* Styles pour la toolbar */
+ion-header {
+  background-color: transparent; /* Rendre la barre d'outils transparente */
+  backdrop-filter: blur(10px); /* Ajouter un flou d'arrière-plan */
+}
+
+ion-content {
+  --background: rgba(0, 0, 0, 0.7); /* Arrière-plan noir transparent */
+  background-image: url('assets/images/recette.jpg'); /* Chemin vers votre image */
+  background-size: cover; /* Couvrir tout l'écran */
+  background-position: center; /* Centrer l'image */
+}
+
+/* Styles pour la liste des recettes */
+/* Liste des recettes avec fond noir transparent */
+ion-list {
+  background: rgba(0, 0, 0, 0.7); /* Arrière-plan noir transparent */
+  padding: 20px; /* Espacement interne */
+  border-radius: 10px; /* Coins arrondis */
+}
+
+/* Style des items de la liste */
+ion-item {
+  background: rgba(33, 9, 9, 0.9); /* Fond blanc légèrement transparent pour les items */
+  border-radius: 10px; /* Coins arrondis */
+  margin-bottom: 10px; /* Espacement entre les items */
+  box-shadow: 0 4px 8px rgba(4, 4, 4, 0.2); /* Ombre pour un effet 3D */
+}
+/* Styles pour les boutons */
+ion-button {
+  background-color: #007bff; /* Couleur de fond claire pour le bouton */
+  color: #ffffff; /* Couleur du texte */
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s, transform 0.2s; /* Transition pour l'effet de survol */
+}
+
+ion-button:hover {
+  background-color: #0056b3; /* Couleur plus foncée au survol */
+  transform: scale(1.05); /* Agrandissement au survol */
+}
+
+/* Pour les boutons de suppression */
+ion-button[color="danger"] {
+  background-color: #dc3545; /* Couleur rouge pour le bouton supprimer */
+  color: #ffffff; /* Couleur du texte */
+}
+
+ion-button[color="danger"]:hover {
+  background-color: #c82333; /* Couleur plus foncée au survol */
+}

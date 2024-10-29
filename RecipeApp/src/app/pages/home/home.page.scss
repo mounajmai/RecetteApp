@@ -1,0 +1,72 @@
+/* Styles globaux pour l'application */
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Arial', sans-serif; /* Ajouter une police globale */
+}
+
+/* Transparent background for the toolbar */
+ion-toolbar {
+  --background: rgba(255, 255, 255, 0.8); /* Changer le fond à un blanc semi-transparent pour plus de contraste */
+  backdrop-filter: blur(5px); /* Background blur for the toolbar */
+  color: #333; /* Couleur du texte foncé pour le contraste */
+  border-radius: 10px;
+  margin: 10px; /* Adds some space around the toolbar */
+}
+
+/* Styles pour le contenu principal */
+ion-content {
+  --background: rgba(0, 0, 0, 0.8); /* Arrière-plan noir légèrement plus opaque */
+  background-image: url('assets/images/recette.jpg'); /* Chemin vers votre image */
+  background-size: cover; /* Couvrir tout l'écran */
+  background-position: center; /* Centrer l'image */
+}
+
+/* Styles pour la liste des recettes */
+ion-list {
+  margin: auto;
+  margin-top: 10%;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Augmenter l'ombre pour un effet plus prononcé */
+  transition: transform 0.3s ease-in-out;
+  background: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
+  backdrop-filter: blur(5px); /* Background blur */
+}
+
+/* Styling for each ion-item within ion-list */
+ion-item {
+  background: rgba(33, 9, 9, 0.9); /* Dark background with 90% opacity */
+  border-radius: 10px; /* Rounded corners */
+  padding: 10px; /* Inner padding for items */
+  margin-bottom: 10px; /* Spacing between items */
+  box-shadow: 0 4px 8px rgba(4, 4, 4, 0.3); /* Shadow for 3D effect */
+  color: #f8f9fa; /* Couleur du texte claire pour une meilleure lisibilité */
+}
+
+/* Styles pour les boutons */
+ion-button {
+  background-color: #007bff; /* Couleur de fond claire pour le bouton */
+  color: #ffffff; /* Couleur du texte */
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s, transform 0.2s; /* Transition pour l'effet de survol */
+  font-size: 16px; /* Augmenter la taille de la police pour les boutons */
+}
+
+ion-button:hover {
+  background-color: #0056b3; /* Couleur plus foncée au survol */
+  transform: scale(1.05); /* Agrandissement au survol */
+}
+
+/* Pour les boutons de suppression */
+ion-button[color="danger"] {
+  background-color: #dc3545; /* Couleur rouge pour le bouton supprimer */
+  color: #ffffff; /* Couleur du texte */
+}
+
+ion-button[color="danger"]:hover {
+  background-color: #c82333; /* Couleur plus foncée au survol */
+}

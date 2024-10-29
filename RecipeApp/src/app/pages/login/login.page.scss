@@ -1,0 +1,52 @@
+/* src/app/pages/login/login.page.scss */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.login-container {
+  display: flex; /* Utilisation de Flexbox pour centrer */
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  height: 100vh; /* Prendre toute la hauteur de l'écran */
+  background-image: url('../../../assets/images/chef.jpg'); /* Chemin d'accès à votre image */
+  background-size: cover; /* Couvrir tout l'écran */
+  background-position: center; /* Centrer l'image */
+}
+
+.login-card {
+  margin: auto;
+  margin-top: 10%;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  background: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
+  backdrop-filter: blur(5px); /* Background blur */
+}
+
+.login-card:hover {
+  transform: scale(1.05); /* Animation de zoom */
+}
+
+h2 {
+  font-weight: bold;
+  text-align: center; /* Centre le texte */
+  color: #ffffff; /* Couleur blanche pour le titre */
+}
+
+/* Style des boutons */
+ion-button {
+  margin-top: 10px;
+}
+ion-button:last-child {
+  color: #007bff; /* Couleur du lien "S'inscrire" */
+  background-color: transparent; /* Lien sans fond */
+}
+
+
+
+

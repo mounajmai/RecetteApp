@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Recettes</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="navigateToCreate()">
+        <ion-icon name="add-outline"></ion-icon> Ajouter Recette
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="logout()">
+        <ion-icon name="log-out-outline"></ion-icon> Déconnexion
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let recipe of recipes" (click)="navigateToDetail(recipe.id)">
+      <ion-label>{{ recipe.name }}</ion-label>
+      <ion-button slot="end" color="danger" (click)="deleteRecipe(recipe.id, $event)">
+        <ion-icon name="trash-outline"></ion-icon> Supprimer
+      </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

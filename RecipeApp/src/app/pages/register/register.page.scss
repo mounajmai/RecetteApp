@@ -1,0 +1,60 @@
+/* src/app/pages/register/register.page.scss */
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.register-container {
+  display: flex; /* Utilisation de Flexbox pour centrer */
+  justify-content: center; /* Centrer horizontalement */
+  align-items: center; /* Centrer verticalement */
+  height: 100vh; /* Prendre toute la hauteur de l'écran */
+  background-image: url('../../../assets/images/chef.jpg'); /* Chemin d'accès à votre image */
+  background-size: cover; /* Couvrir tout l'écran */
+  background-position: center; /* Centrer l'image */
+}
+
+.login-card {
+  margin: auto;
+  margin-top: 10%;
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+  background: rgba(0, 0, 0, 0.7); /* Black with 70% opacity */
+  backdrop-filter: blur(5px); /* Background blur */
+}
+
+h2 {
+  font-weight: bold;
+  text-align: center; /* Centre le texte */
+  color: #ffffff; /* Couleur blanche pour le titre */
+}
+
+ion-button {
+  margin-top: 10px;
+  background-color: #007bff; /* Couleur de fond opaque pour le bouton */
+  color: white; /* Couleur du texte du bouton */
+  --border-radius: 10px; /* Arrondir les coins des boutons */
+}
+
+ion-button:last-child {
+  color: #007bff; /* Couleur du lien "S'inscrire" */
+  background-color: transparent; /* Lien sans fond */
+}
+
+
+/* Animation d'entrée */
+@keyframes slideIn {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,60 @@
+/* Background styling for the content area */
+ion-content {
+  --background: url('../../../assets/images/recette.jpg') no-repeat center center / cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Form item styling with semi-transparent black background */
+ion-item {
+  --background: rgba(0, 0, 0, 0.6); /* Black with 60% opacity */
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+ion-label {
+  color: #e0e0e0; /* Light color for labels */
+  font-weight: bold;
+}
+
+ion-input,
+ion-textarea {
+  --background: #e0e0e0; /* Light background for inputs */
+  --padding-start: 8px;
+  color: #333;
+  border-radius: 5px;
+}
+
+ion-button {
+  background-color: #38a169; /* Green color for the button */
+  color: white;
+  font-weight: bold;
+  margin-top: 20px;
+  border-radius: 5px;
+  border: none; /* Supprime le contour */
+}
+
+/* Header styling */
+ion-header {
+  background-color: #6b3d6f; /* Darker purple header */
+  color: white;
+  text-align: center;
+}
+
+ion-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Styles spécifiques pour le bouton de retour */
+ion-button[expand="full"] {
+  box-shadow: none; /* Supprime l'ombre */
+  --box-shadow: none; /* Assure que l'ombre ne s'affiche pas */
+}
+
+ion-button[style*="background:"] {
+  box-shadow: none; /* Supprime l'ombre pour le bouton de retour */
+}

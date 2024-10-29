@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Modifier la Recette</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="stacked">Nom de la Recette</ion-label>
+    <ion-input [(ngModel)]="recipe.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Description</ion-label>
+    <ion-textarea [(ngModel)]="recipe.description"></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Ingrédients (séparer par des virgules)</ion-label>
+    <ion-input [(ngModel)]="ingredientsString" placeholder="Séparer par des virgules"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Instructions</ion-label>
+    <ion-textarea [(ngModel)]="recipe.instructions"></ion-textarea>
+  </ion-item>
+  <ion-button expand="full" (click)="updateRecipe()">Mettre à Jour</ion-button>
+</ion-content>
