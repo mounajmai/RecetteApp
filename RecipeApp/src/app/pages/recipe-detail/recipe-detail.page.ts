@@ -39,14 +39,13 @@ export class RecipeDetailPage implements OnInit {
       console.error('Aucun ID de recette fourni.');
     }
   }
-  goBack() {
-    this.router.navigate(['/home']); 
-  }
 
   navigateToEdit() {
     if (this.recipeId) {
       this.router.navigate(['/recipe-edit', this.recipeId]);
     }
   }
-
+   goBack() {
+    this.router.navigate(['/home']); 
+  }
 }

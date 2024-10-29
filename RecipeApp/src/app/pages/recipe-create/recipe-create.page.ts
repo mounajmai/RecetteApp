@@ -17,6 +17,12 @@ export class RecipeCreatePage {
   ) {}
 
   async createRecipe() {
+    // Vérifiez que tous les champs sont remplis
+    if (!this.recipe.name || !this.recipe.description || !this.recipe.ingredients.length || !this.recipe.instructions) {
+      await this.showAlert('Veuillez remplir tous les champs.');
+      return; // Sortir de la méthode si des champs sont vides
+    }
+
     // S'assurer que les ingrédients sont un tableau
     this.recipe.ingredients = this.recipe.ingredients.toString().split(',').map((ingredient: string) => ingredient.trim());
 
@@ -45,6 +51,17 @@ export class RecipeCreatePage {
 
       await alertError.present(); // Présenter l'alerte d'erreur
     }
+  }
+
+  // Méthode pour afficher une alerte
+  async showAlert(message: string) {
+    const alert = await this.alertController.create({
+      header: 'Erreur',
+      message: message,
+      buttons: ['OK']
+    });
+
+    await alert.present(); // Présenter l'alerte
   }
 
   goBack() {
